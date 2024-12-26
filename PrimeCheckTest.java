@@ -22,14 +22,18 @@ public class PrimeCheckTest {
   // --------------------------------------------------------------- //
   @Test
   public void testPrimes() {
-    /* ToDo: insert a test here */
-    assertEquals("this will fail", true, false);
+    int[] primes = { 2, 3, 5, 11, 23 };
+    for (int prime : primes) {
+      assertTrue("Test prime " + prime, PrimeCheck.isPrime(prime));
+    }
   }
 
   // --------------------------------------------------------------- //
   @Test
   public void testNonPrimes() {
-    /* ToDo: insert a test here */
-    assertEquals("this will fail", true, false);
+    int[] nonPrimes = { 4, 6, 9, 15, 25 };
+    for (int nonPrime : nonPrimes) {
+      assertFalse("Test non prime " + nonPrime, PrimeCheck.isPrime(nonPrime));
+    }
   }
 }
